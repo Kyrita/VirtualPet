@@ -36,10 +36,17 @@ void draw() {
   ellipse(0,0,50,120);
   resetMatrix();
   
+  /*
+  translate(165,340);
+  rotate( 30 * (PI/180));
+  ellipse(0,0,50,120);
+  resetMatrix();
+  */
+  
   //
   triangle(5,5,5,5,5,5);
   
-  //left
+  //aux
   translate(mouseX,mouseY);
   rotate( r * (PI/180));
   ellipse(0,0,x,y);
@@ -47,7 +54,7 @@ void draw() {
   
 };
 
-//
+//temporary
 void mouseClicked() {
   System.out.print(mouseX);
   System.out.print(", ");
@@ -55,7 +62,9 @@ void mouseClicked() {
   System.out.print(x);
   System.out.print(", ");
   System.out.println(y);
+  System.out.println(r);
 }
+
 void keyReleased() {
   if (key == 'a') {
     x--;
