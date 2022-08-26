@@ -92,6 +92,11 @@ fill(color(255,225,0));
 translate(200,132);
 rotate( 0 * (PI/180));
 ellipse(0,0,43,16);
+resetMatrix();
+fill(color(250,220,0));
+translate(200,134);
+rotate( 0 * (PI/180));
+ellipse(0,0,43,8);
 resetMatrix(); 
   
 //arm left
