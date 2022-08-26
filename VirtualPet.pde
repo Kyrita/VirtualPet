@@ -5,7 +5,6 @@ int r = 0;
 */
 size(400,400);
 
-clear();
 background(color(125,200,200));
   
 //accents
