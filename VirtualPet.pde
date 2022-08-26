@@ -18,6 +18,15 @@ line(410,350,300,410);
 strokeWeight(20);
 line(-10,75,150,-10);  
 
+//title
+fill(color(105,180,180)); 
+textSize(20);
+textAlign(CENTER);
+translate(350,350);
+rotate( -30 * (PI/180));
+text("PENGUIN",0,0);
+resetMatrix();
+
 strokeWeight(2);
 
 noStroke();   
