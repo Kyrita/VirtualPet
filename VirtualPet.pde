@@ -1,4 +1,3 @@
-//homage to devin's penguin
 void setup() {
   size(400,400);
 }
@@ -6,205 +5,117 @@ void setup() {
 int x = 20;
 int y = 20;
 int r = 0;
-void draw() {
-  
-  //
-  clear();
-  background(255);
-  //
-  textAlign(CENTER);
-  stroke(color(10,10,10,200));
-  fill(color(255,255,255,100));
-  
-  //head
-  ellipse(200,125,135,115);
-  
-  
-  //torso
-  ellipse(200,250,190,200);
-  
-  
-  //left
-  translate(125,210);
-  rotate( 30 * (PI/180));
-  ellipse(0,0,50,120);
-  resetMatrix();
-  
-  //right
-  translate(275,210);
-  rotate( -30 * (PI/180));
-  ellipse(0,0,50,120);//homage to devin's penguin
-void setup() {
-  size(400,400);
-}
 
-int x = 20;
-int y = 20;
-int r = 0;
 void draw() {
   
   //
   clear();
   background(255);
   //
-  textAlign(CENTER);
   stroke(color(10,10,10,200));
   fill(color(255,255,255,100));
   
   //head
-  ellipse(200,125,135,115);
-  
-  
-  //torso
-  ellipse(200,250,190,200);
-  
-  
-  //left arm
-  translate(125,210);
-  rotate( 30 * (PI/180));
-  ellipse(0,0,50,120);
-  resetMatrix();
-  
-  //right arm
-  translate(275,210);
-  rotate( -30 * (PI/180));
-  ellipse(0,0,50,120);
-  resetMatrix();
- 
-  //left foot
-  translate(165,340);
-  rotate( 10 * (PI/180));
-  ellipse(0,0,65,20);
-  resetMatrix();
-  
-  //right foot
-  translate(235,340);
-  rotate( -10 * (PI/180));
-  ellipse(0,0,65,20);
-  resetMatrix();
-  
-  //skull
-  translate(200,100);
+  translate(200,125);
   rotate( 0 * (PI/180));
-  ellipse(0,0,90,60);
+  ellipse(0,0,135,115);
   resetMatrix();
   
   //jaw
-  translate(200,140);
+  translate(200,150);
   rotate( 0 * (PI/180));
-  ellipse(0,0,110,70);
+  ellipse(0,0,125,50);
   resetMatrix();
+
+  //eye left
+  translate(162,135);
+  rotate( 26 * (PI/180));
+  ellipse(0,0,49,64);
+  resetMatrix();
+   
+  //eye right
+  translate(238,135);
+  rotate( -26 * (PI/180));
+  ellipse(0,0,49,64);
+  resetMatrix(); 
   
-  //mouth
-  translate(200,125);
+  //beako
+  translate(200,132);
   rotate( 0 * (PI/180));
-  ellipse(0,0,60,22);
+  ellipse(0,0,43,16);
+  resetMatrix(); 
+  
+  //torso
+  translate(200,235);
+  rotate( 0 * (PI/180));
+  ellipse(0,0,189,168);
   resetMatrix();
   
   //belly
-  translate(201,230);
+  translate(200,240);
   rotate( 0 * (PI/180));
-  ellipse(0,0,100,145);
+  ellipse(0,0,173,164);
+  resetMatrix();  
+  
+  //arm left
+  translate(116,192);
+  rotate( 50 * (PI/180));
+  ellipse(0,0,23,86);
   resetMatrix();
   
-  //left ear
-  translate(155,75);
-  rotate( -30 * (PI/180));
-  ellipse(0,0,40,25);
-  resetMatrix();
- //right eat
-  translate(245,75);
-  rotate( 30 * (PI/180));
-  ellipse(0,0,40,25);
-  resetMatrix();
+  //wingtip left
+  translate(101,208);
+  rotate( 50 * (PI/180));
+  ellipse(0,0,25,42);
+  resetMatrix();  
   
-  //
-  triangle(5,5,5,5,5,5);
-  
-  //aux
-  translate(mouseX,mouseY);
-  rotate( r * (PI/180));
-  ellipse(0,0,x,y);
+  //arm right
+  translate(284,192);
+  rotate( -50 * (PI/180));
+  ellipse(0,0,23,86);
   resetMatrix();
   
-};
-
-//temporary
-void mouseClicked() {
-  System.out.print(mouseX);
-  System.out.print(", ");
-  System.out.println(mouseY);
-  System.out.print(x);
-  System.out.print(", ");
-  System.out.println(y);
-  System.out.println(r);
-}
-
-void keyReleased() {
-  if (key == 'a') {
-    x--;
-  };
-   if (key == 'd') {
-    x++;
-  };
-   if (key == 'w') {
-    y++;
-  };
-   if (key == 's') {
-    y--;
-  };
-   if (key == 'q') {
-    r--;
-  };
-   if (key == 'e') {
-    r++;  
-   };
-}
-//
+  //wingtip right
+  translate(299,208);
+  rotate( -50 * (PI/180));
+  ellipse(0,0,25,42);
+  resetMatrix(); 
+  
+  //F-L-M
+  translate(160,312);
+  rotate( 20 * (PI/180));
+  ellipse(0,0,37,48);
+  resetMatrix();
+  
+  //F-L-LR
+  translate(157,321);
+  rotate( 20 * (PI/180));
+  ellipse(0,0,51,20);
   resetMatrix();
  
-  translate(165,340);
-  rotate( 10 * (PI/180));
-  ellipse(0,0,65,20);
+  //F-R-M
+  translate(240,312);
+  rotate( -20 * (PI/180));
+  ellipse(0,0,37,48);
   resetMatrix();
   
-  translate(235,340);
+  //F-R-LR
+  translate(243,321);
+  rotate( -20 * (PI/180));
+  ellipse(0,0,51,20);
+  resetMatrix();
+
+  //eye left
+  translate(166,128);
   rotate( -10 * (PI/180));
-  ellipse(0,0,65,20);
+  arc(0,0,15,15,7*PI/6, 11*PI/6 );
   resetMatrix();
-  
-  translate(200,100);
-  rotate( 0 * (PI/180));
-  ellipse(0,0,90,60);
+
+  //eye right
+  translate(234,128);
+  rotate( 10 * (PI/180));
+  arc(0,0,15,15,7*PI/6, 11*PI/6 );
   resetMatrix();
-  
-  translate(200,140);
-  rotate( 0 * (PI/180));
-  ellipse(0,0,110,70);
-  resetMatrix();
-  
-  translate(200,125);
-  rotate( 0 * (PI/180));
-  ellipse(0,0,60,22);
-  resetMatrix();
-  
-  translate(201,230);
-  rotate( 0 * (PI/180));
-  ellipse(0,0,100,145);
-  resetMatrix();
-  
-  translate(155,75);
-  rotate( -30 * (PI/180));
-  ellipse(0,0,40,25);
-  resetMatrix();
-  
-  translate(245,75);
-  rotate( 30 * (PI/180));
-  ellipse(0,0,40,25);
-  resetMatrix();
-  
-  //
-  triangle(5,5,5,5,5,5);
   
   //aux
   translate(mouseX,mouseY);
